@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\QueueController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,5 +21,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/start-queue', [QueueController::class, 'startQueue'])->middleware(['auth'])->name('start-queue');
 
 require __DIR__.'/auth.php';
