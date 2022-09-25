@@ -1,2 +1,2 @@
 # laravel-queue
- An example project to demonastrate laravel queue
+ An example project to demonstrate laravel queue
