@@ -15,6 +15,10 @@ class SayHelloJob implements ShouldQueue
 
     protected $message;
 
+    public $tries         = 5;
+    public $maxExceptions = 3;
+    public $timeout       = 120;
+
     /**
      * Create a new job instance.
      *

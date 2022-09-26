@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Jobs\SayHelloJob;
 use Carbon\Carbon;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class QueueController extends Controller
 {
-    public static function startQueue()
+    public function startQueue(): RedirectResponse
     {
         $contacts = [
             'Zubayer',
